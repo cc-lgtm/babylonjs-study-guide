@@ -223,7 +223,14 @@ babel-walk@3.0.0-canary-5:
   dependencies:
     "@babel/types" "^7.9.6"
 
-babylonjs@^4.2.2:
+babylonjs-gui@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.npmmirror.com/babylonjs-gui/-/babylonjs-gui-4.2.2.tgz#73ce9e2ae6caba97475557e32e4961ff4d44482a"
+  integrity sha512-LCjj9bZMR7TCJw5PizhS+lHRxhOWcQ6wGVEs6DjY5leT6Lb9jUD9LwqTemfd1KobZLOg5/TY89LqMzNLkDvtng==
+  dependencies:
+    babylonjs "4.2.2"
+
+babylonjs@4.2.2, babylonjs@^4.2.2:
   version "4.2.2"
   resolved "https://registry.npmmirror.com/babylonjs/-/babylonjs-4.2.2.tgz#ee6d22799b423d476208731fcd7d3212b44d1345"
   integrity sha512-p7mTi6+nLuWJTLbwxEJxLOh/QMHMV2KA0bviEoQSK5VtsAq1F0JghoOZYRs4aEqAZF/deFPWvMQk1vbXJ+4eEA==
