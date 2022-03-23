@@ -4,7 +4,7 @@ import {
 } from 'babylonjs'
 
 function mainBGM(scene: Scene, status: boolean) {
-  const sound = new Sound('sound', 'src/assets/sound/mainSound.mp3', scene, null, {
+  const sound = new Sound('sound', 'src/assets/sound/copycat(revised).mp3', scene, null, {
     loop: true,
     autoplay: true
   })
