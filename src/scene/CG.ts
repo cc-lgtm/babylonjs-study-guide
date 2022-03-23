@@ -1,4 +1,3 @@
-import { onMounted } from 'vue'
 import {
   Scene,
   Engine,
@@ -7,8 +6,8 @@ import {
   SpriteManager,
   Sprite
 } from 'babylonjs'
+import { state, STATE } from '../store'
 
-let index = 0
 function createSprite(name: string, src: string, scene: Scene) {
   const spriteManagerCG = new SpriteManager(name, src, 100,
   {width: window.innerWidth / 4, height: window.innerHeight}, scene)
@@ -32,6 +31,5 @@ export function CGScene(engine: Engine, canvas: HTMLCanvasElement): Scene {
   ]
 
   createSprite('cg', 'src/assets/sprites/beginning_anim.png', scene)
-
   return scene
 }
