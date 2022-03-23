@@ -8,7 +8,6 @@ import {
   TextBlock
 } from 'babylonjs-gui'
 import { state, STATE } from '../store'
-import { loadingUI } from './loading'
 
 function createButton(name: string, text: string, callback: () => void): Button {
   const button = Button.CreateSimpleButton(name, text)
@@ -53,11 +52,7 @@ function mainMenu() {
   imageRect.addControl(title)
 
   const startButton = createButton('startButton', '开始游戏', () => {
-    loadingUI.show()
-    setTimeout(() => {
-      loadingUI.hide()
-      state.value = STATE.CG
-    }, 500)
+    state.value = STATE.CG
   })
   const continueButton = createButton('continueButton', '继续游戏', () => {
   })

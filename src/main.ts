@@ -13,7 +13,7 @@ const canvas = creatCanvas()
 const engine = new Engine(canvas)
 
 const menuScene = mainMenuScene(engine, canvas)
-const cgScene = CGScene(engine)
+const cgScene = CGScene(engine, canvas)
 
 engine.runRenderLoop(() => {
   switch (state.value) {
