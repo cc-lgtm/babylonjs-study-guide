@@ -8,8 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "babylonjs": "^4.2.2",
-    "babylonjs-gui": "^4.2.2",
+    "@babylonjs/core": "^4.2.2",
+    "@babylonjs/gui": "^4.2.2",
+    "@babylonjs/loaders": "^4.2.2",
     "vue": "^3.2.25"
   },
   "devDependencies": {

@@ -6,7 +6,7 @@ import {
   StackPanel,
   Control,
   TextBlock
-} from 'babylonjs-gui'
+} from '@babylonjs/gui'
 import { state, STATE } from '../store'
 
 function createButton(name: string, text: string, callback: () => void): Button {

@@ -2,8 +2,9 @@ import {
   Scene,
   Engine,
   UniversalCamera,
-  Vector3
-} from 'babylonjs'
+  Vector3,
+  SceneLoader
+} from '@babylonjs/core'
 import { mainMenu } from '../GUI'
 import { mainBGM } from '../BGM'
 

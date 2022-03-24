@@ -1,6 +1,6 @@
 import {
   Engine
-} from 'babylonjs'
+} from '@babylonjs/core'
 import { STATE, state } from './store'
 import { mainMenuScene, CGScene, gameScene, loseScene } from './scene'
 
@@ -27,6 +27,7 @@ engine.runRenderLoop(() => {
       break
     case STATE.GAME:
       game_scene.render()
+      break
     case STATE.LOSE:
       lose_scene.render()
     default:

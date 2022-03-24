@@ -1,7 +1,7 @@
 import {
   Scene,
   Sound
-} from 'babylonjs'
+} from '@babylonjs/core'
 
 function mainBGM(scene: Scene, status: boolean) {
   const sound = new Sound('sound', 'src/assets/sound/copycat(revised).mp3', scene, null, {
