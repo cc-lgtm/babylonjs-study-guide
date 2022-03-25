@@ -3,6 +3,9 @@ import {
 } from '@babylonjs/core'
 import { STATE, state } from './store'
 import { mainMenuScene, CGScene, gameScene, loseScene } from './scene'
+import { createSkyBox } from './examples/skybox'
+import { createMesh } from './examples/mesh'
+import { createParticle } from './examples/particle'
 
 function creatCanvas() {
   const canvas = document.createElement('canvas')
@@ -18,19 +21,19 @@ const game_scene = gameScene(engine, canvas)
 const lose_scene = loseScene(engine, canvas)
 
 engine.runRenderLoop(() => {
-  switch (state.value) {
-    case STATE.START:
-      menuScene.render()
-      break
-    case STATE.CG:
-      cgScene.render()
-      break
-    case STATE.GAME:
-      game_scene.render()
-      break
-    case STATE.LOSE:
-      lose_scene.render()
-    default:
-      break
-  }
+  // switch (state.value) {
+  //   case STATE.START:
+  //     menuScene.render()
+  //     break
+  //   case STATE.CG:
+  //     cgScene.render()
+  //     break
+  //   case STATE.GAME:
+  //     game_scene.render()
+  //     break
+  //   case STATE.LOSE:
+  //     lose_scene.render()
+  //   default:
+  //     break
+  // }
 })
