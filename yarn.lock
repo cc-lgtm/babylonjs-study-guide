@@ -44,6 +44,14 @@
     babylonjs-gltf2interface "4.2.2"
     tslib ">=1.10.0"
 
+"@babylonjs/materials@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.npmmirror.com/@babylonjs/materials/-/materials-4.2.2.tgz#3ad9e5aea9a5883785edc0bea9a88cdf25b448ee"
+  integrity sha512-Y7umjVEYV5ZsLYVxgrkb5+4lPsz35acgOEqiZErFBdGXJw3AHJLJmalcmL5WXqUBR2SzyShFLCJOdbFQbkmaxg==
+  dependencies:
+    "@babylonjs/core" "4.2.2"
+    tslib ">=1.10.0"
+
 "@emmetio/abbreviation@^2.2.3":
   version "2.2.3"
   resolved "https://registry.npmmirror.com/@emmetio/abbreviation/-/abbreviation-2.2.3.tgz#2b3c0383c1a4652f677d5b56fb3f1616fe16ef10"
