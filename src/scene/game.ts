@@ -19,7 +19,6 @@ import {
 import '@babylonjs/loaders'
 import { Player, onKeyBord } from '../player'
 
-
 function loadScene(scene: Scene) {
   SceneLoader.ImportMeshAsync(null, 'src/assets/module/', 'envSetting.glb', scene).then(result => {
     const mesh = result.meshes[0]
@@ -35,9 +34,9 @@ export function gameScene(engine: Engine, canvas: HTMLCanvasElement): Scene {
   loadScene(scene)
 
   player.mesh().then(mesh => {
-    const camera = new FollowCamera('camera', new Vector3(10, 10, 5), scene, mesh)
+    const camera = new FollowCamera('camera', new Vector3(10, 8, 10), scene)
     camera.setTarget(Vector3.Zero())
-    camera.attachControl(true)
+    // camera.attachControl(true)
     camera.lowerRadiusLimit = 10
     camera.upperRadiusLimit = 10
     camera.heightOffset = 10

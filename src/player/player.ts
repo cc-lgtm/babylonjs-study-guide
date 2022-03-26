@@ -2,9 +2,28 @@ import {
   Scene,
   SceneLoader,
   ISceneLoaderAsyncResult,
-  Mesh
+  Mesh,
+  CannonJSPlugin,
+  FollowCamera,
+  Camera,
+  Vector3,
 } from '@babylonjs/core'
 import '@babylonjs/loaders'
+import * as cannon from 'cannon'
+
+function playerCamera(scene: Scene, canvas: HTMLCanvasElement, target?: Mesh): Camera {
+  const camera = new FollowCamera('camera', new Vector3(10, 10, 5), scene, target)
+  camera.setTarget(Vector3.Zero())
+  camera.lowerRadiusLimit = 10
+  camera.upperRadiusLimit = 10
+  camera.attachControl(true)
+
+  return camera
+}
+
+function updateCamera(camera: Camera) {
+
+}
 
 export class Player {
   private scene: Scene
@@ -15,6 +34,8 @@ export class Player {
   }
   private load(): Promise<ISceneLoaderAsyncResult> {
     const player = SceneLoader.ImportMeshAsync(null, 'src/assets/module/', 'player.glb', this.scene)
+    const plugin = new CannonJSPlugin(false, 1, cannon)
+    this.scene.enablePhysics(new Vector3(1, 1, 1), plugin)
     return player
   }
   async mesh() {

@@ -1,10 +1,10 @@
-import { mainMenuScene } from './mainMenu'
+import { start } from './start'
 import { CGScene } from './CG'
 import { gameScene } from './game'
 import { loseScene } from './lose'
 
 export {
-  mainMenuScene,
+  start,
   CGScene,
   gameScene,
   loseScene
