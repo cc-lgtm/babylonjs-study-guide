@@ -7,8 +7,14 @@ import {
   StackPanel,
   TextBlock
 } from '@babylonjs/gui'
-import { Scene, Engine } from '@babylonjs/core'
+import {
+  Scene,
+  Engine,
+  UniversalCamera,
+  Vector3
+} from '@babylonjs/core'
 import { state, STATE } from '../store'
+import { App } from '../main'
 
 function createButton(name: string, text: string, callback: () => void): Button {
   const button = Button.CreateSimpleButton(name, text)
@@ -62,7 +68,7 @@ function menu(scene: Scene) {
   advancedTexture.addControl(imageRect)
   advancedTexture.addControl(UiPanel)
 
-  const title = new TextBlock("title", "夏天的节日")
+  const title = new TextBlock("title", "夏日灯笼节")
   title.resizeToFit = true
   title.fontFamily = "Ceviche One"
   title.fontSize = "64px"
@@ -75,6 +81,9 @@ function menu(scene: Scene) {
 
   const startButton = createButton('startButton', '开始游戏', () => {
     state.value = STATE.CG
+    document.querySelector('canvas')?.remove()
+    const app = new App()
+    app.render()
   })
   const continueButton = createButton('continueButton', '继续游戏', () => {
   })
@@ -90,6 +99,7 @@ function menu(scene: Scene) {
 
 export function start(engine: Engine): Scene {
   const scene = new Scene(engine)
+  const camera = new UniversalCamera('camera', new Vector3(10, 10, 5), scene)
   menu(scene)
   return scene
 }
